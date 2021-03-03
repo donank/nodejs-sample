@@ -5,7 +5,7 @@ var path = require('path');
 
 router.get('/', function (req, res, next) {
   imagesController.fetchImages().then((result) => {
-    res.status(200).json(result.rows)
+    res.status(200).json({ data: result.rows })
   }).catch(err => {
     throw error
   })
@@ -13,6 +13,14 @@ router.get('/', function (req, res, next) {
 
 router.get('/:id', function (req, res, next) {
   imagesController.fetchImageById(req.params.id).then((result) => {
+    res.status(200).json(result.rows)
+  }).catch(err => {
+    throw error
+  })
+});
+
+router.get('/doc_images/:id', function (req, res, next) {
+  imagesController.fetchImages().then((result) => {
     res.status(200).json(result.rows)
   }).catch(err => {
     throw error
