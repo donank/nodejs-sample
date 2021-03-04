@@ -11,8 +11,9 @@ router.get('/',  (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
+  console.log(req.body)
   doctorController.addDoctor(req.body.name).then((result) => {
-    res.status(201).json({data: result.rows})
+    res.status(201).json(result.rows[0])
   })
 })
 

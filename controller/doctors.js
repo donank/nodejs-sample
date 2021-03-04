@@ -9,7 +9,7 @@ const fetchDoctorById = (id) => {
 }
 
 const addDoctor = (doctorName) => {
-    return pool.query(`INSERT INTO doctors VALUES ('${doctorName}') returning id`);
+    return pool.query(`INSERT INTO doctors (doctor_name) VALUES ('${doctorName}') returning id`);
 }
 
 
