@@ -16,4 +16,8 @@ const fetchImagesByDocId = (docId) => {
    `);
 }
 
-module.exports = { fetchImages, fetchImageById, fetchImagesByDocId }
+const addImage = (deviceId, location) => {
+    return pool.query(`insert into patient_images (device_id, image_detail) values ('${deviceId}', '${location}')`);
+}
+
+module.exports = { fetchImages, fetchImageById, fetchImagesByDocId, addImage }

@@ -4,4 +4,8 @@ const fetchDevices = () => {
     return pool.query('SELECT * FROM devices ORDER BY id ASC');
 }
 
-module.exports = { fetchDevices }
+const addDevice = (id, doctorId) => {
+    return pool.query(`insert into devices (id, doctor_id) values ('${id}', '${doctorId}') on conflict (id) do nothing;`)
+}
+
+module.exports = { fetchDevices, addDevice }
