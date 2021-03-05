@@ -65,11 +65,29 @@ Versions of different dependencies and libraries during the development which ar
 
 # Routes
 
-- `GET /doctors` -> Return details of all doctors in the database
-- `POST /doctors` -> Sends a doctor detail to the database and returns it's row id from database
+- `GET /doctors/` -> Return details of all doctors from the database
+- `POST /doctors/` -> Save details of a doctor to the database and returns it's row id from database. The strucutre of the request should be like below:
 ```
-JSON Body Request format
+*Body*
+- Type - raw/json
 {
     "name": "Bob"
 }
 ```
+- `GET /devices/` -> Return details of all devices from the database
+- `GET /images/` -> Return details of all images from the database
+- `GET /images/:id` -> Return details of image with the id={:id}
+- `POST /images/` -> Save details of an image to the database. The strucutre of the request should be like below:
+```
+*Headers*
+- Content-type - multipart/form-data
+- device_id - '2341AD' (String)
+- doctor_id - 1 (Integer)
+
+*Body*
+- Type - form-data
+- Add a field called to send the the image file like `File - {file}`
+
+```
+- `GET /images/doctor/:id` -> Return all the images belonging to a doctor with id={:id}
+- `GET /images/image_detail/:id` -> Return the image file with id={:id}
