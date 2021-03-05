@@ -67,8 +67,8 @@ Versions of different dependencies and libraries during the development which ar
 
 - `GET /doctors` -> Return details of all doctors in the database
 - `POST /doctors` -> Sends a doctor detail to the database and returns it's row id from database
-> JSON Body Request format
 ```
+JSON Body Request format
 {
     "name": "Bob"
 }
