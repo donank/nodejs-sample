@@ -77,6 +77,8 @@ Versions of different dependencies and libraries during the development which ar
 - `GET /devices/` -> Return details of all devices from the database
 - `GET /images/` -> Return details of all images from the database
 - `GET /images/:id` -> Return details of image with the id={:id}
+- `GET /images/doctor/:id` -> Return all the images belonging to a doctor with id={:id}
+- `GET /images/image_detail/:id` -> Return the image file with id={:id}
 - `POST /images/` -> Save details of an image to the database. The strucutre of the request should be like below:
 ```
 *Headers*
@@ -89,5 +91,3 @@ Versions of different dependencies and libraries during the development which ar
 - Add a field called to send the the image file like `File - {file}`
 
 ```
-- `GET /images/doctor/:id` -> Return all the images belonging to a doctor with id={:id}
-- `GET /images/image_detail/:id` -> Return the image file with id={:id}
