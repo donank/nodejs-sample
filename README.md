@@ -1,6 +1,6 @@
 # Introduction
 
-A Node JS application acting as the API interface for the Woods Lamp Project. It aggregates and accumulated data from the Postgres SQL database server and provides network APIs that can be consumed by other web and mobile based applications. The backend was developed using the express framework and it's suggested guidelines.
+A sample backend Node JS application for a personal project. It aggregates and accumulated data from the Postgres SQL database server and provides network APIs that can be consumed by other web and mobile based applications. The backend was developed using the express framework and it's suggested guidelines.
 
 # Environment Setup
 
